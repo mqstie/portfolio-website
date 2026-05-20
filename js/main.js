@@ -8,12 +8,11 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  { threshold: 0, rootMargin: '0px 0px -120px 0px' }
 );
 
-document.querySelectorAll('.project-card, .experience-item, .section-header').forEach((el, i) => {
+document.querySelectorAll('.project-card, .experience-item, .section-header').forEach((el) => {
   el.classList.add('fade-in');
-  el.style.transitionDelay = `${i * 0.07}s`;
   observer.observe(el);
 });
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MindLoom - Amy Anderson</title>
+  <title>SMO Project - Amy Anderson</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,7 +42,11 @@
       </div>
       <h1 class="project-hero__title">Scottish Mammal Observation Site Deployment </h1>
       <p class="project-hero__summary">
-        Project summary
+        The aim of this project was to design, develop and evaluate a suite of web pages using HTML, 
+        CSS, PHP, JavaScript and MySQL to deploy the Scottish Mammal Observation (SMO) site, a 
+        platform for recording and sharing mammal sightings across Scotland. The project involved creating 
+        an intuitive user interface for data entry and retrieval, implementing backend functionality for data 
+        management and security, and ensuring the site was responsive and accessible to a wide range of users.
       </p>
       <div class="project-hero__meta">
         <div class="project-meta-item">
@@ -78,31 +82,103 @@
       <section class="project-section" id="section-requirements">
         <h2 class="project-h2">Project Requirements</h2>
         <p>
-          
+          Create a basic PHP/MySQL website displaying 34 Scottish mammal species and 3,863 observation records dating 
+          from 1981-2016. Features to include:
         </p>
+        <ul>
+            <li>Species catalogue with images</li>
+            <li>Detailed species pages with full observation history</li>
+            <li>Interactive map plotting observation locations via lat/long coordinates</li>
+            <li>Search and filter by conservation status, diet and habitat</li>
+            <li>Sortable species table</li>
+            <li>Date range filtering for observations</li>
+            <li>Full CRUD functionality</li>
+            <li>Data visualisations showing species distribution statistics</li>
+            <li>User authentication and session management</li>
+            <li>Contact form with client-side validation</li>
+        </ul>
       </section>
 	  
 	  <!-- ─── DESIGN ─────────────────────────────────── -->
       <section class="project-section" id="section-design">
         <h2 class="project-h2">Interface Design</h2>
+        <h3 class="project-h3">User Flow</h3>
         <p>
-          
+          First, I established the core user flow for the site, mapping out how users would navigate between the 
+          homepage, species catalogue, individual species pages. I focused on creating an intuitive structure that 
+          would allow users to easily access the information they were looking for while enforcing user authentication
+          for data management features (CRUD operations).
         </p>
+
+        <figure class="project-figure">
+          <img src="images/smo-plan.png" alt="User journey for SMO website" />
+          <figcaption>User Journey</figcaption>
+        </figure>
+
+        <h3 class="project-h3">Figma Prototypes</h3>
+        <p>
+          I created high-fidelity prototypes in Figma to visualise the design of the site across desktop, tablet and 
+          mobile devices. I focused on a clean, modern aesthetic with a nature-inspired colour palette (greens & neutral tones)
+          to reflect the site's focus on wildlife. The prototypes included key pages such as the homepage, species 
+          catalogue, species detail pages, ensuring a consistent user experience across all devices.
+        </p>
+
+        <figure class="project-figure">
+          <img src="images/smo-desktop.png" alt="Desktop layout for SMO website" />
+          <figcaption>Desktop Layout</figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <img src="images/smo-tablet.png" alt="Tablet layout for SMO website" />
+          <figcaption>Tablet Layout</figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <img src="images/smo-mobile.png" alt="Mobile layout for SMO website" />
+          <figcaption>Mobile Layout</figcaption>
+        </figure>
       </section>
 	  
 	  <!-- ─── IMPLEMENTATION ─────────────────────────────────── -->
       <section class="project-section" id="section-implementation">
         <h2 class="project-h2">Implementation</h2>
         <p>
-          
+          During the implementation phase, many changes and additions were added to the site to ensure it met the project 
+          requirements and provided a good user experience. The initial prototype was also designed with my own programming 
+          skills in mind, but as I progressed in my learning, adjustments to the design to accommodate new features and 
+          technical capabilities were made. For example, many alterations were made to the table layout to enhance the UX of 
+          the site, including mouseovers and coloured buttons as well as a filter bar.
         </p>
+        <p>
+          The final implementation of the site can be seen below:
+        </p>
+        <figure class="project-figure project-video">
+          <video controls poster="images/smo-video-poster.png">
+            <source src="videos/smo-demo.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+          <figcaption>Demo video of the final Scottish Mammals website implementation.</figcaption>
+        </figure>
       </section>
 	  
 	  <!-- ─── EVALUATION ─────────────────────────────────── -->
       <section class="project-section" id="section-evaluation">
         <h2 class="project-h2">Evaluation and Reflection</h2>
         <p>
-          
+          The website prototype demonstrates strong alignment with established usability principles, including clear 
+          user feedback through flash messages, descriptive form validation, and a minimalist interface. However, some 
+          user experience gaps remain; most notably, users are redirected to the home page after logging in rather 
+          than back to their previous location, which interrupts their workflow. Design trade-offs were made in favour 
+          of simplicity, such as using server-side rendering instead of a JavaScript framework and a basic table layout,
+          which keep the codebase accessible but limit interactivity and performance with large datasets.
+        </p>
+        <p>
+          On the technical side, the code is readable and well-structured, though JavaScript logic embedded within PHP 
+          files reduces maintainability and reusability. The most pressing technical issue is the lack of pagination, 
+          which causes slow load times when handling large volumes of data; a problem that will worsen as the database 
+          scales. Security also needs attention, as the system currently allows any user to sign up and modify data 
+          without admin approval. Priority next steps include implementing pagination for scalability and tightening 
+          access control to protect data integrity before any public deployment.
         </p>
       </section>
 	  </div>
@@ -110,7 +186,7 @@
 	<!-- PROJECT FOOTER NAV -->
 	<div class="project-nav-footer">
 		<a href="index.html#projects" class="btn btn-ghost">← All projects</a>
-		<a href="project-template.html" class="btn btn-primary">Next project →</a>
+		<a href="project-redesigning-merchiston-courtyard.html" class="btn btn-primary">Next project →</a>
 	</div>
   </main>
 
