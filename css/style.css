@@ -375,12 +375,17 @@ body {
 .project-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 200px;  /* removes the top positioning */
+  left: 0; right: 0;
   height: 3px;
   background: var(--accent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s;
+}
+
+.project-card--featured::before {
+  top: 320px;
 }
 
 .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
@@ -405,6 +410,21 @@ body {
   max-width: 60ch;
 }
 
+.project-card__image {
+  width: calc(100% + 4rem);
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  margin: -2rem -2rem 1rem -2rem;
+  background-color: #ffffff;
+}
+
+.project-card--featured .project-card__image {
+  height: 320px;
+  padding:20px 20px 0 20px;
+}
+
 .project-card__meta {
   display: flex;
   gap: 0.5rem;
@@ -415,7 +435,7 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--accent-dark);
-  background: rgba(95, 93, 152, 0.12);
+  background: rgba(104, 102, 184, 0.12);
   padding: 0.25rem 0.625rem;
   border-radius: 999px;
 }
